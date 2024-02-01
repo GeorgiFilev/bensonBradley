@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "title": "My First Blog",
+      "body": "Why do we use it? \n it is a long established fact that a reader will be ...",
+      "author": "mario",
+      "id": "1"
+    },
+    {
+      "title": "My Second Blog",
+      "body": "Why do we call it? \n it is a slow refirbished  established fact that a reader will be ...",
+      "author": "georgi",
+      "id": "2"
+    },
+    {
+      "id": "493e",
+      "title": "asfa",
+      "body": "afafafafa",
+      "author": "yosi"
+    }
+  ],
+  "authentication": [
+    {
+      "username": "admin",
+      "password": "12345"
+    }
+  ]
+}

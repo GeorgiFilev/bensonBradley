@@ -1,13 +1,1072 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Quatrocento Sans';
+  src: url('../public/fonts/QuattrocentoSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Quatrocento Sans', sans-serif;
+  /* Apply the font to the body or other elements as needed */
+}
+
+.width100 {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.height40px {
+  height: 40px;
+}
+
+.text-decNone {
+  text-decoration: none;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.padding16 {
+  padding: 16px;
+}
+
+.flexNavbar {
+  display: flex;
+  flex-direction: row;
+  order: 1;
+}
+
+.orderNavbar {
+  display: none;
+}
+
+.logo {
+  order: 2;
+}
+
+.logoLink {
+  width: 100%;
+}
+
+.links {
+  order: 3;
+}
+
+.callNowHeader {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 20px 0;
+  height: 80px !important;
+  padding: 0 20px;
+}
+
+.borderR32 {
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 16px;
+  color: white;
+  background-color: rgba(129, 0, 33, 1);
+  line-height: 24px;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.95;
+}
+
+.content {
+  padding: 0 40px;
+}
+
+
+.firstSection {
+  border-radius: 60px;
+  background-image: url('/src/assets/firstSection.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+.whitishBack {
+  display: flex;
+  width: 45%;
+  height: 296px;
+  transform: rotate(24.917deg);
+  flex-shrink: 0;
+  border-radius: 816px;
+  opacity: 0.5;
+  background: #C194A0;
+  filter: blur(100px);
+  z-index: 2;
+}
+
+.firstSectionTextBuble {
+  color: white;
+  margin-top: -150px;
+  padding-left: 4%;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.bigtitle {
+  text-transform: uppercase;
+  font-size: 48px;
+}
+
+.welcome {
+  font-weight: 100;
+  font-size: 22px;
+}
+
+.whiteButton {
+  padding: 16px 32px;
+  color: #202221;
+  background-color: white;
+  font-size: 18px;
+  font-weight: 700;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.rightBot {
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.bubbleTransparent {
+  padding: 8px 16px;
+  border: solid 1px white;
+  border-radius: 18px;
+  background-color: #2022219d;
+}
+
+.secondSection {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.threeCards {
+  width: 30%;
+  padding: 32px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(240, 241, 241, 1);
+  justify-content: space-between;
+}
+
+.threeCards div {
+  padding: 10px 0;
+}
+
+.secondSectionHeader {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.rowOnCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.requestQuote {
+  padding: 8px 16px;
+  border-radius: 16px;
+  border: 1px solid #C4C6C5;
+}
+
+.getConsultation {
+  padding: 8px 16px;
+  color: rgba(129, 0, 33, 1);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* ---------------------------------- About us \/ */
+
+.aboutUsSection {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5%;
+}
+
+.aboutUsText {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 60px;
+  align-items: flex-start;
+  border: 1px solid #D1E7E0;
+  justify-content: space-between;
+}
+
+.aboutUsTitle {
+  text-transform: uppercase;
+  font-size: 48px;
+}
+
+.textAbout {
+  color: rgba(32, 34, 33, 1);
+  opacity: 0.8;
+  font-weight: 400;
+  font-size: 22px;
+  padding-bottom: 32px;
+}
+
+.lineAbout {
+  height: 30px;
+  border-top: 1px solid #C4C6C5;
+  width: 100%;
+}
+
+.plus465Clients {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: rgba(129, 0, 33, 1);
+}
+
+.bolded465 {
+  font-weight: 700;
+  font-size: 56px;
+}
+
+.aboutUsPhoto {
+  width: 50%;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.textChicagoOffice {
+  font-weight: 400;
+  text-align: end;
+  margin-top: -40px;
+  padding-bottom: 15px;
+  margin-right: 40px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 22px;
+}
+
+.mapSection {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+  border-radius: 60px;
+  background-color: #FFF3F2;
+  gap: 10px;
+}
+
+.leftMap {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 40px 40px;
+}
+
+.rightMap {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 40px 40px 0;
+}
+
+.mapTitle {
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.textMap {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+/* ----------------------------------------- \/ Commitment*/
+.commitmentSection {}
+
+.commitmentTitle {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 48px;
+  text-align: center;
+}
+
+.commitmentSubheader {
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.commitmentTwosections {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.highestProffesional {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.greyHeader {
+  color: #202221;
+  opacity: 0.4;
+  font-weight: 700;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.higlitedHeader {
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 0.4;
+  padding: 2% 0;
+}
+
+.highestProffesional {
+  width: 50%;
+}
+
+.imageCommitmentSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrowRightCommitmentSection {
+  padding-right: 2%;
+}
+
+.greyHeader:hover {
+  opacity: 0.7;
+}
+
+.textImageCommitment {
+  font-weight: 400;
+  padding-bottom: 35px;
+  margin-right: 35px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 22px;
+  line-height: 1.5;
+  /* Set line-height based on your design */
+  transition: margin-top 0.3s ease;
+  /* Add a transition for a smooth effect */
+}
+
+.textImageCommitment.adjusted {
+  transform: translateY(calc(-1 * var(--lineHeight)));
+}
+
+
+
+.clientVoicesSection {}
+
+.clientVoicesHeader {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #202221;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerClientVoices {
+  padding: 40px 0;
+}
+
+.arrowsNextPrev {}
+
+
+.blog-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.blog-preview {
+  width: 30%;
+  min-height: 400px;
+  padding: 32px;
+  border-radius: 60px;
+  border-bottom: 1px solid #fafafa;
+  background-color: #F0F1F1;
+}
+
+.starsSatisfaction {
+  display: flex;
+  flex-direction: row;
+}
+
+.textClient {
+  color: #202221;
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.hrline {
+  color: #C4C6C5;
+}
+
+
+
+/*  -------------------------------------------------------------- ^ is for Home page */
+
+
+
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-preview h2 {
+  font-size: 20px;
+  color: rgb(201, 43, 69);
+}
+
+.redColor {
+  color: #810021;
+  font-size: 18px;
+  padding-left: 4px;
+}
+
+.formCreate {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  gap: 5px;
+  justify-content: center;
+}
+
+
+.login {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: #fff;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {}
+
+.password {}
+
+.loginBtn {
+  margin: 20px;
+  background-color: #810021;
+  padding: 8px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+}
+
+.namesVoice {
+  font-weight: 700;
+  color: #202221;
+  font-size: 24px;
+  opacity: 0.8;
+}
+
+.twoButtonsClientSatisfaction {
+  display: flex;
+  flex-direction: row;
+  margin: 28px;
+  justify-content: center;
+}
+
+.googleReviews {
+  font-weight: 700;
+  font-size: 18px;
+  color: #202221;
+  border-radius: 16px;
+  border: 1px solid #202221;
+  padding: 16px 32px;
+  gap: 10px;
+}
+
+.scheduleConsultation {
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  background-color: #810021;
+  border-radius: 16px;
+  padding: 16px 32px;
+  gap: 10px;
+}
+
+.minWidth240 {
+  min-width: 440px;
+}
+
+.twoButtns {
+  display: flex;
+  justify-content: center;
+  width: 240px;
+  margin: 16px 5px;
+}
+
+/* ---------------------------------------------  \/ Questions Section */
+.questionsSection {
+  padding: 40px 32px;
+  background-color: #810021;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.leftSideQuestions {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightSideQuestions {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 19px;
+}
+
+.titleQuestions {
+  color: white;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.firstQ {
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.roundWhite {
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.alignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.smallAdditionalText {
+  display: flex;
+  font-weight: 400;
+  font-size: 22px;
+  opacity: 0.8;
+  padding: 24px 5% 24px 0;
+}
+
+.fourthQuestionText {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.width50percent {
+  width: 50%;
+}
+
+.bottomLeftQuestions {
+  display: flex;
+  flex-direction: column;
+}
+
+.haveMoreQuestion {
+  color: white;
+  font-size: 32px;
+}
+
+.buttonCallNow {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 16px 32px;
+  border-radius: 16px;
+  background-color: white;
+  width: 240px;
+  text-align: center;
+
+}
+
+.heigh1brown {
+  width: 100%;
+  height: 1px;
+  background-color: #BD8180;
+  opacity: 0.5;
+  margin: 24px 0;
+}
+
+/* ----------------------------------------------\/ Quick order */
+.quickOrderSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.centerOrder {
+  width: 60%;
+}
+
+.leftOrder {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightOrder {
+  width: 20%;
+}
+
+.quickOrderHeader {
+  color: #202221;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+}
+
+.subHeaderFillOut {
+  color: #202221;
+  opacity: 0.8;
+  font-weight: 400;
+  font-size: 22px;
+  padding: 24px;
+  text-align: center;
+}
+
+.formQuickOrder {
+  width: 100%;
+}
+
+.inputLine {
+  display: flex;
+  padding-bottom: 16px;
+}
+
+.orderInputField {
+  border-radius: 16px;
+  width: 100%;
+  height: 56px;
+  font-size: large;
+  border: 1px solid #7B868C;
+}
+
+.orderSelectField {
+  border-radius: 16px;
+  width: 100%;
+  height: 56px;
+  font-size: large;
+  border: 1px solid #7B868C;
+}
+
+.goRight {
+  width: 50%;
+  align-self: end;
+}
+
+label {
+  font-size: 18px;
+}
+
+.gap10betweenOrder {
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.greyFileUpload {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 16px;
+  border: 1px dashed #C4C6C5;
+  background-color: #F0F1F1;
+  padding: 24px;
+}
+
+.dragDropText {
+  font-weight: 700;
+  font-size: 22px;
+  opacity: 0.8;
+  color: #202221;
+}
+
+.acceptableFiles {
+  color: #202221;
+  font-weight: 400;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.leftSideDrag {
+  width: 60%;
+}
+
+.rightSideDrag {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonUpload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  border: 1px solid #000;
+  background-color: #F0F1F1;
+  width: 120px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.buttonUpload:hover {
+  color: rgb(126, 104, 104);
+}
+
+.submit {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 16px 32px;
+  border-radius: 16px;
+  background-color: #810021;
+  text-align: center;
+  margin: 32px 0 16px 0;
+}
+
+.byClickingAgree {
+  text-align: center;
+  color: #202221;
+  opacity: 0.8;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+/* ------------------------------------------------ footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #202221;
+  border-radius: 50px 50px 0 0;
+  padding: 60px 10%;
+}
+
+.section1Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section2Footer {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0.8;
+  margin: 40px 0;
+}
+
+.section3Footer {
+  color: white;
+  opacity: 0.8;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer1row {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.linesInFooter1 {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.linesInFooter2 {
+  color: white;
+  opacity: 0.8;
+  font-weight: 700;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.linesInFooter3 {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.footer4row {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+
+
+/* ------------------------------------------- \/ media query */
+
+@media(max-width: 768px) {
+  div {}
+
+  .content {
+    /* for media query */
+    padding: 5px;
+  }
+
+  .flexNavbar {
+    order: 1;
+    grid-area: flexNavbar;
+  }
+
+  .redColor {
+    display: none;
+  }
+
+  .logo {
+    order: 2;
+    grid-area: logo;
+    width: 30%;
+  }
+
+  .links {
+    order: 3;
+    grid-area: links;
+    display: none;
+  }
+
+  .callNowHeader {
+    color: #810021;
+    font-weight: 700;
+    display: block;
+    font-size: 14px;
+  }
+
+  .orderNavbar {
+    order: 3;
+    display: block;
+  }
+
+  .navbar {
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top: -1px;
+    background-color: white;
+  }
+
+  .orderNavbar .borderR32 {
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  .firstSection {
+    /* for media query */
+    min-width: auto;
+    height: 100%;
+    background-color: #202221;
+    background-image: none;
+  }
+
+  .rightBot {
+    flex-direction: column;
+  }
+
+  .firstSectionTextBuble {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .secondSection {
+    flex-direction: column;
+  }
+
+  .threeCards {
+    width: fit-content;
+  }
+
+  .aboutUsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5%;
+  }
+
+  .aboutUsText {
+    /* for media query */
+    width: fit-content;
+  }
+
+  .aboutUsPhoto {
+    width: 100%;
+  }
+
+  .mapSection {
+    flex-direction: column;
+  }
+
+  .leftMap {
+    width: 100%;
+    padding: 0;
+  }
+
+  .rightMap {
+    padding: 0;
+    width: 100%;
+  }
+
+  .mapTitle {
+    font-size: 38px;
+  }
+
+  .commitmentTwosections {
+    flex-direction: column;
+  }
+
+  .highestProffesional {
+    width: 100%;
+  }
+
+  .imageCommitmentSection {
+    width: 100%;
+  }
+
+  .clientVoicesHeader {
+    flex-direction: column;
+  }
+
+  .rightSideDrag {
+    padding: 20px 0 0 0;
+  }
+
+  .blog-list {
+    flex-direction: column;
+  }
+
+  .greyFileUpload {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-preview {
+    width: fit-content;
+  }
+
+  .questionsSection {
+    flex-direction: column;
+  }
+
+  .leftSideDrag {
+    width: 100%;
+  }
+
+  .leftSideQuestions {
+    width: 100%;
+  }
+
+  .rightSideQuestions {
+    width: 100%;
+  }
+
+  .bigtitle .aboutUsTitle .mapTitle .commitmentTitle .clientVoicesHeader .titleQuestions .quickOrderHeader {
+    font-size: 38px;
+  }
+
+  .footer {
+    padding: 30px 10px;
+  }
+
+  .leftOrder {
+    display: none;
+  }
+
+  .rightOrder {
+    display: none;
+  }
+
+  .centerOrder {
+    width: 100%;
+  }
+
+  .section1Footer {
+    flex-direction: column;
+  }
+
+  .footer1row {
+    width: 100%;
+  }
+
+  .footer4row {
+    width: 100%;
+  }
+
 }
