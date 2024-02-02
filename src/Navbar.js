@@ -17,9 +17,9 @@ const Navbar = () => {
             </div>
 
             <div className="links">
-                <Link className="borderR32" to="/create" >
+                <a className="borderR32" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0YkZpH3UiD_NLyOuPFBoNFpm5hdORQ9yV9K0ckl5YvRde0wNvU4ogh9zq5ZQ7MR7yI1AYKHrEh" >
                     Make an appointment
-                </Link>
+                </a>
             </div>
             <div className="orderNavbar">
                 <Link className="borderR32" to="/create" >

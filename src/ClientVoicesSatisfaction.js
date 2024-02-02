@@ -52,9 +52,9 @@ const ClientVoicesSatisfaction = ({ clientVoices }) => {
                 </Link>
 
 
-                <Link to="/" className="twoButtns scheduleConsultation text-decNone">
+                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0YkZpH3UiD_NLyOuPFBoNFpm5hdORQ9yV9K0ckl5YvRde0wNvU4ogh9zq5ZQ7MR7yI1AYKHrEh" className="twoButtns scheduleConsultation text-decNone">
                     Schedule Consultation
-                </Link>
+                </a>
 
             </div>
         </div>

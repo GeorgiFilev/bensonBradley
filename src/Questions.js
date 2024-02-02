@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import minus from './assets/Minus.svg';
 import plus from './assets/Plus.svg';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
-const Questions = () => {
+const Questions = ({ loggedIn, blogs }) => {
     const [firstQuestion, SetFirstQuestion] = useState(false);
     const [secondQuestion, SetSecondQuestion] = useState(false);
     const [thirdQuestion, SetThirdQuestion] = useState(false);
@@ -41,14 +42,14 @@ const Questions = () => {
                     </div>
                     <br />
                     <div className='buttonCallNow'>
-                        Call Now
+                        <a className='phoneRedirect' href="tel:+13129529877">Call Now</a>
                     </div>
                 </div>
             </div>
             <div className="rightSideQuestions">
                 <div className='spaceBetween'>
                     <div className="firstQ">
-                        What is the role of a notary public in the notarization process?
+                        {blogs[27].title}
                     </div>
                     <div className='alignCenter'>
                         {
@@ -56,12 +57,19 @@ const Questions = () => {
                                 <img src={minus} alt="minus" onClick={() => handleClick(1)} className='roundWhite' /> :
                                 <img src={plus} alt="plus" onClick={() => handleClick(1)} className='roundWhite' />
                         }
+                        {
+                            loggedIn == true ?
+
+                                <Link className="adminEditLink" to={`/blogs/${27}`}>
+                                    Edit
+                                </Link>
+                                : null
+                        }
                     </div>
                 </div>
                 {firstQuestion ?
                     <div className='firstQ smallAdditionalText'>
-                        A notary public plays a crucial role in the notarization process by acting as an impartial witness. Their primary responsibilities include verifying the identity of the document signers, ensuring their willingness to sign the document, and certifying the authenticity of the signatures. Additionally, notaries administer oaths and affirmations, certify copies of documents, and may also witness the signing of affidavits, powers of attorney, and other legal documents. The notary's official seal and signature lend credibility to the notarized documents, confirming their validity and authenticity.
-                        This process helps prevent fraud and ensures that the documents are legally binding.
+                        {blogs[27].body}
                     </div>
                     : null}
 
@@ -69,7 +77,7 @@ const Questions = () => {
 
                 <div className="spaceBetween">
                     <div className="firstQ">
-                        How does apostille authentication differ from traditional notarization?
+                        {blogs[28].title}
                     </div>
                     <div className='alignCenter'>
                         {
@@ -77,18 +85,25 @@ const Questions = () => {
                                 <img src={minus} alt="minus" onClick={() => handleClick(2)} className='roundWhite' /> :
                                 <img src={plus} alt="plus" onClick={() => handleClick(2)} className='roundWhite' />
                         }
+                        {
+                            loggedIn == true ?
+
+                                <Link className="adminEditLink" to={`/blogs/${28}`}>
+                                    Edit
+                                </Link>
+                                : null
+                        }
                     </div>
                 </div>
                 {secondQuestion ?
                     <div className='firstQ smallAdditionalText'>
-                        Apostille authentication differs from traditional notarization in that it is specifically intended for use in countries that are part of the Hague Apostille Convention. While traditional notarization involves the verification of the authenticity of a document by a notary public, apostille authentication is a simplified certification process that verifies the authenticity of the seals and signatures of officials on public documents for international use. Apostille certification is recognized across member countries, eliminating the need for further legalization or embassy authentication. In contrast, traditional notarization is more broadly focused on verifying the identity and willingness of document signers and ensuring the
-                        authenticity of their signatures, with its scope not limited to international use.
+                        {blogs[28].body}
                     </div>
                     : null}
                 <div className='heigh1brown'></div>
                 <div className="spaceBetween">
                     <div className="firstQ">
-                        Can any document be notarized, or are there specific requirements?
+                        {blogs[29].title}
                     </div>
                     <div className='alignCenter'>
                         {
@@ -96,18 +111,25 @@ const Questions = () => {
                                 <img src={minus} alt="minus" onClick={() => handleClick(3)} className='roundWhite' /> :
                                 <img src={plus} alt="plus" onClick={() => handleClick(3)} className='roundWhite' />
                         }
+                        {
+                            loggedIn == true ?
+
+                                <Link className="adminEditLink" to={`/blogs/${29}`}>
+                                    Edit
+                                </Link>
+                                : null
+                        }
                     </div>
                 </div>
                 {thirdQuestion ?
                     <div className='firstQ smallAdditionalText'>
-                        Not all documents can be notarized, and there are specific requirements that must be met for a document to be eligible for notarization. Notarization is typically reserved for documents that require an impartial witness to attest to the signing parties' identities, willingness to sign, and the accuracy of the document's contents. For a document to be notarized, it must be signed in the physical presence of the notary public, who will then complete the notarial certificate. Additionally, the document must not violate any laws, and the signers must have the mental capacity to understand the nature of the document and their actions. Documents such as wills, certain vital records, and documents with incomplete information may not be notarized,
-                        while some jurisdictions may have specific requirements for the types of documents that can be notarized.
+                        {blogs[29].body}
                     </div>
                     : null}
                 <div className='heigh1brown'></div>
                 <div className="spaceBetween">
                     <div className="firstQ">
-                        Which countries are part of the Hague Apostille Convention?
+                        {blogs[30].title}
                     </div>
                     <div className="alignCenter">
                         {
@@ -115,13 +137,20 @@ const Questions = () => {
                                 <img src={minus} alt="minus" onClick={() => handleClick(4)} className='roundWhite' /> :
                                 <img src={plus} alt="plus" onClick={() => handleClick(4)} className='roundWhite' />
                         }
+                        {
+                            loggedIn == true ?
+
+                                <Link className="adminEditLink" to={`/blogs/${30}`}>
+                                    Edit
+                                </Link>
+                                : null
+                        }
                     </div>
                 </div>
                 {fourthQuestion ?
                     <div className='firstQ smallAdditionalText column'>
                         <div>
-                            The Hague Apostille Convention, also known as the Apostille Treaty, currently has 118 member countries.
-                            Some of the notable member countries include:
+                            {blogs[30].body}
                         </div>
                         <div className='fourthQuestionText'>
                             <ul className='width50percent'>
@@ -262,7 +291,7 @@ const Questions = () => {
                 <div className='heigh1brown'></div>
                 <div className='spaceBetween'>
                     <div className="firstQ">
-                        What is the process for obtaining an apostille for a document intended for international use?
+                        {blogs[31].title}
                     </div>
                     <div className='alignCenter'>
                         {
@@ -270,12 +299,20 @@ const Questions = () => {
                                 <img src={minus} alt="minus" onClick={() => handleClick(5)} className='roundWhite' /> :
                                 <img src={plus} alt="plus" onClick={() => handleClick(5)} className='roundWhite' />
                         }
+                        {
+                            loggedIn == true ?
+
+                                <Link className="adminEditLink" to={`/blogs/${31}`}>
+                                    Edit
+                                </Link>
+                                : null
+                        }
                     </div>
                 </div>
                 {fifthQuestion ?
                     <div className='firstQ smallAdditionalText column'>
                         <div>
-                            The process for obtaining an apostille for a document intended for international use typically involves the following steps:
+                            {blogs[31].body}
                         </div>
                         <div>
                             <ol>

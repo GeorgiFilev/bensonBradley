@@ -10,8 +10,12 @@ const QuickOrder = () => {
     const [country, setCountry] = useState('');
     const [phoneNumber, setPhoneNUmber] = useState('');
     const [serviceType, setServiceType] = useState('');
-    const [documentType, setDocumentType] = useState('');
     const [file, setFile] = useState('');
+
+    const handleFileChange = (e) => {
+        const selectedFile = e.target.files[0];
+        setFile(selectedFile);
+    };
 
 
 
@@ -33,12 +37,13 @@ const QuickOrder = () => {
                 </div>
                 <div className="formOrder">
                     <form
-                        action=""
+                        action="mailto:georgi@remotemore.com"
                         method="post"
+                        encType="text/plain"
                         className="formQuickOrder"
                     >
                         <div className="column inputLine">
-                            <label htmlFor=""> Name</label>
+                            <label htmlFor="name"> Name</label>
                             <input
                                 className="orderInputField"
                                 type="text"
@@ -54,13 +59,14 @@ const QuickOrder = () => {
                                 type="text"
                                 required
                                 value={email}
+                                name="email"
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
                         <div className="row flex gap10betweenOrder">
                             <div className="flex column width50percent">
                                 <label htmlFor=""> Country</label>
-                                <select className="orderSelectField" value={country} onChange={(e) => setCountry(e.target.value)}>
+                                <select className="orderSelectField" value={country} onChange={(e) => setCountry(e.target.value)} name="Country">
                                     <option value="Albania">Albania</option>
                                     <option value="Andorra">Andorra</option>
                                     <option value="Antigua and Barbuda">Antigua and Barbuda</option>
@@ -194,6 +200,7 @@ const QuickOrder = () => {
                                     type="text"
                                     required
                                     value={phoneNumber}
+                                    name="phone Number"
                                     onChange={(e) => setPhoneNUmber(e.target.value)}
                                 />
                             </div>
@@ -201,21 +208,95 @@ const QuickOrder = () => {
                         <div className="row flex gap10betweenOrder">
                             <div className="flex column width50percent">
                                 <label htmlFor=""> Service Type</label>
-                                <select className="orderSelectField" value={serviceType} onChange={(e) => setServiceType(e.target.value)}>
-                                    <option value="Albania">Option1</option>
-                                    <option value="Andorra">opt2</option>
-                                    <option value="Antigua and Barbuda">opt 3</option>
-                                    <option value="Argentina">opt4</option>
+                                <select className="orderSelectField" value={serviceType} onChange={(e) => setServiceType(e.target.value)} name="Service Type">
+                                    <option value="Birth Certificates">Birth Certificates</option>
+                                    <option value="Marriage Certificates">Marriage Certificates</option>
+                                    <option value="Divorce Decrees">Divorce Decrees</option>
+                                    <option value="Death Certificates">Death Certificates</option>
+                                    <option value="Court Documents">Court Documents</option>
+                                    <option value="Notarized Documents">Notarized Documents</option>
+                                    <option value="Academic Diplomas">Academic Diplomas</option>
+                                    <option value="Adoption Papers">Adoption Papers</option>
+                                    <option value="Business Licenses">Business Licenses</option>
+                                    <option value="Powers of Attorney">Powers of Attorney</option>
+                                    <option value="Patent Applications">Patent Applications</option>
+                                    <option value="Trademark Registrations">Trademark Registrations</option>
+                                    <option value="Immigration Documents">Immigration Documents</option>
+                                    <option value="Naturalization Papers">Naturalization Papers</option>
+                                    <option value="Visa Applications">Visa Applications</option>
+                                    <option value="Educational Transcripts">Educational Transcripts</option>
+                                    <option value="School Records">School Records</option>
+                                    <option value="Medical Reports">Medical Reports</option>
+                                    <option value="Employment Contract">Employment Contract</option>
+                                    <option value="Real Estate Transaction">Real Estate Transaction</option>
+                                    <option value="Certificates of Good Standing">Certificates of Good Standing</option>
+                                    <option value="Affidavit">Affidavit</option>
+                                    <option value="Insurance Documents">Insurance Documents</option>
+                                    <option value="Export Certificates">Export Certificates</option>
+                                    <option value="Import Licenses">Import Licenses</option>
+                                    <option value="Commercial Invoices">Commercial Invoices</option>
+                                    <option value="Non-criminal Record Certificates">Non-criminal Record Certificates</option>
+                                    <option value="Tax Residency Certificate">Tax Residency Certificate</option>
+                                    <option value="Trade Agreements">Trade Agreements</option>
+                                    <option value="Regulatory Filings">Regulatory Filings</option>
+                                    <option value="Construction Permits">Construction Permits</option>
+                                    <option value="Health Certificates">Health Certificates</option>
+                                    <option value="Environmental Assessments">Environmental Assessments</option>
+                                    <option value="Public Bids and Tenders">Public Bids and Tenders</option>
+                                    <option value="Government Authorizations">Government Authorizations</option>
+                                    <option value="Work Permits">Work Permits</option>
+                                    <option value="Financial Statements">Financial Statements</option>
+                                    <option value="Powers of Sale">Powers of Sale</option>
+                                    <option value="Arbitration Agreements">Arbitration Agreements</option>
+                                    <option value="Trust Documents">Trust Documents</option>
+                                    <option value="Corporate Bylaws">Corporate Bylaws</option>
+                                    <option value="Shareholder Agreements">Shareholder Agreements</option>
+                                    <option value="Stock Certificates">Stock Certificates</option>
+                                    <option value="Partnership Agreements">Partnership Agreements</option>
+                                    <option value="Franchise Agreements">Franchise Agreements</option>
+                                    <option value="Information Security Policies">Information Security Policies</option>
+                                    <option value="Licensing Agreements">Licensing Agreements</option>
+                                    <option value="Promissory Notes">Promissory Notes</option>
+                                    <option value="Articles of Incorporation">Articles of Incorporation</option>
+                                    <option value="Joint Venture Contracts">Joint Venture Contracts</option>
+                                    <option value="Drivers License">Drivers License</option>
+                                    <option value="Passport">Passport</option>
+                                    <option value="FBI background check">FBI background check</option>
+                                    <option value="Proof of residency">Proof of residency</option>
+                                    <option value="Verification of identity">Verification of identity</option>
+                                    <option value="Degree verification certificate">Degree verification certificate</option>
+                                    <option value="Diploma">Diploma</option>
+                                    <option value="Report card">Report card</option>
+                                    <option value="Progress report">Progress report</option>
+                                    <option value="Hi school diploma">Hi school diploma</option>
+                                    <option value="Official transcript">Official transcript</option>
+                                    <option value="W-2 and earning summary">W-2 and earning summary</option>
+                                    <option value="Payroll statement">Payroll statement</option>
+                                    <option value="Check stubs">Check stubs</option>
+                                    <option value="Employment verification">Employment verification</option>
+                                    <option value="Contractor agreement">Contractor agreement</option>
+                                    <option value="Equivalency report">Equivalency report</option>
+                                    <option value="Graduation verification letter">Graduation verification letter</option>
+                                    <option value="Parental consent form">Parental consent form</option>
+                                    <option value="Enrollment verification">Enrollment verification</option>
+                                    <option value="Business tax certificate">Business tax certificate</option>
+                                    <option value="Letter of engagement">Letter of engagement</option>
+                                    <option value="Operating agreement">Operating agreement</option>
+                                    <option value="Articles of incorporation">Articles of incorporation</option>
+                                    <option value="Certificate of residency">Certificate of residency</option>
+                                    <option value="Undergraduate record">Undergraduate record</option>
+                                    <option value="Certificate or signature">Certificate or signature</option>
+                                    <option value="IRS e-file signature authorization">IRS e-file signature authorization</option>
+                                    <option value="Baptism record">Baptism record</option>
+                                    <option value="Academic achievement record">Academic achievement record</option>
+                                    <option value="Certification">Certification</option>
+                                    <option value="Certificate of work experience">Certificate of work experience</option>
+                                    <option value="Vital records">Vital records</option>
+                                    <option value="Certificate of naturalization">Certificate of naturalization</option>
+                                    <option value="Warranty deed">Warranty deed</option>
+                                    <option value="Certificate of expected completion">Certificate of expected completion</option>
                                 </select>
-                            </div>
-                            <div className="flex column width50percent">
-                                <label htmlFor=""> Document Type</label>
-                                <select className="orderSelectField" value={documentType} onChange={(e) => setDocumentType(e.target.value)}>
-                                    <option value="Albania">Option1</option>
-                                    <option value="Andorra">opt2</option>
-                                    <option value="Antigua and Barbuda">opt 3</option>
-                                    <option value="Argentina">opt4</option>
-                                </select>
+
                             </div>
                         </div>
 
@@ -231,13 +312,31 @@ const QuickOrder = () => {
                             </div>
                             <div className="rightSideDrag">
                                 <div className="buttonUpload">
-                                    Upload
+                                    <label htmlFor="fileInput">
+                                        Upload
+                                        <input
+                                            type="file"
+                                            id="fileInput"
+                                            accept=".jpeg, .jpg, .png, .doc, .pdf"
+                                            onChange={handleFileChange}
+                                            style={{ display: 'none' }}
+                                            name="file"
+                                        />
+                                    </label>
                                 </div>
+                                <br />
+                                {
+                                    file ?
+                                        <div>
+                                            {file.name}
+                                        </div>
+                                        : null
+                                }
                             </div>
                         </div>
-                        <div className="submit">
+                        <button className="submit width100" type="submit">
                             Submit
-                        </div>
+                        </button>
                         <div className="byClickingAgree">
                             By clicking “Submit” button you agree to the
                         </div>

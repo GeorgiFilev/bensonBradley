@@ -8,8 +8,9 @@ import img6 from './assets/Rectangle 8 (6).png';
 import img7 from './assets/Rectangle 8 (7).png';
 
 import arrow from './assets/right-arrow.svg';
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
-const CommitmentSection = () => {
+const CommitmentSection = ({ loggedIn, blogs }) => {
     const [highlited, setHighlited] = useState(1);
 
     useEffect(() => {
@@ -69,31 +70,31 @@ const CommitmentSection = () => {
                 <div className="highestProffesional">
                     <div className={highlited == 1 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(1)}>
                         {highlited == 1 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
-                        Highest Professional Standards
+                        {blogs[7].title}
                     </div>
                     <div className={highlited == 2 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(2)}>
                         {highlited == 2 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
-                        Client Satisfaction
+                        {blogs[8].title}
                     </div>
                     <div className={highlited == 3 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(3)}>
                         {highlited == 3 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
-                        Accessiblity
+                        {blogs[9].title}
                     </div>
                     <div className={highlited == 4 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(4)}>
                         {highlited == 4 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
-                        Technological Advancements
+                        {blogs[10].title}
                     </div>
                     <div className={highlited == 5 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(5)}>
                         {highlited == 5 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
-                        Community Trust
+                        {blogs[11].title}
                     </div>
                     <div className={highlited == 6 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(6)}>
                         {highlited == 6 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
-                        Education and Informing
+                        {blogs[12].title}
                     </div>
                     <div className={highlited == 7 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(7)}>
                         {highlited == 7 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
-                        Long-term Relationships
+                        {blogs[13].title}
                     </div>
                 </div>
 
@@ -104,9 +105,16 @@ const CommitmentSection = () => {
                                 <div className="imageCommitmentSection">
                                     <img src={img1} alt="imageText1" />
                                     <div className="textImageCommitment">
-                                        We aim to mantain the highest level of professionalism and
-                                        ethical standards in all our interactions and services.
+                                        {blogs[7].body}
                                     </div>
+                                    {
+                                        loggedIn == true ?
+
+                                            <Link className="adminEditLink" to={`/blogs/${7}`}>
+                                                Edit
+                                            </Link>
+                                            : null
+                                    }
                                 </div>
                             );
                             break;
@@ -115,9 +123,16 @@ const CommitmentSection = () => {
                                 <div className="imageCommitmentSection">
                                     <img src={img2} alt="imageText2" />
                                     <div className="textImageCommitment">
-                                        Our focus is on delivering exceptional service that meets and exceeds the expectations of
-                                        our clients, ensuring their notarial needs are met with utmost accuracy and efficiency.
+                                        {blogs[8].body}
                                     </div>
+                                    {
+                                        loggedIn == true ?
+
+                                            <Link className="adminEditLink" to={`/blogs/${8}`}>
+                                                Edit
+                                            </Link>
+                                            : null
+                                    }
                                 </div>
                             );
                             break;
@@ -126,9 +141,16 @@ const CommitmentSection = () => {
                                 <div className="imageCommitmentSection">
                                     <img src={img3} alt="imageText3" />
                                     <div className="textImageCommitment">
-                                        We strive to make notarial services more accessible by offering mobile solutions that cater to the
-                                        busy schedules of our clients, providing convenience without compromising on quality.
+                                        {blogs[9].body}
                                     </div>
+                                    {
+                                        loggedIn == true ?
+
+                                            <Link className="adminEditLink" to={`/blogs/${9}`}>
+                                                Edit
+                                            </Link>
+                                            : null
+                                    }
                                 </div>
                             );
                             break;
@@ -137,9 +159,16 @@ const CommitmentSection = () => {
                                 <div className="imageCommitmentSection">
                                     <img src={img4} alt="imageText4" />
                                     <div className="textImageCommitment">
-                                        Continuously seeking to incorporate the latest technology to streamline our processes and
-                                        improve the overall client experience.
+                                        {blogs[10].body}
                                     </div>
+                                    {
+                                        loggedIn == true ?
+
+                                            <Link className="adminEditLink" to={`/blogs/${10}`}>
+                                                Edit
+                                            </Link>
+                                            : null
+                                    }
                                 </div>
                             );
                             break;
@@ -148,9 +177,16 @@ const CommitmentSection = () => {
                                 <div className="imageCommitmentSection">
                                     <img src={img5} alt="imageText5" />
                                     <div className="textImageCommitment">
-                                        Building and maintaining a strong reputation within the community by being a reliable and
-                                        trustworthy service provider.
+                                        {blogs[11].body}
                                     </div>
+                                    {
+                                        loggedIn == true ?
+
+                                            <Link className="adminEditLink" to={`/blogs/${11}`}>
+                                                Edit
+                                            </Link>
+                                            : null
+                                    }
                                 </div>
                             );
                             break;
@@ -159,9 +195,16 @@ const CommitmentSection = () => {
                                 <div className="imageCommitmentSection">
                                     <img src={img6} alt="imageText6" />
                                     <div className="textImageCommitment">
-                                        We believe in empowering our clients with knowledge, helping them understand the importance
-                                        and implications of notarizations and apostille certifications.
+                                        {blogs[12].body}
                                     </div>
+                                    {
+                                        loggedIn == true ?
+
+                                            <Link className="adminEditLink" to={`/blogs/${12}`}>
+                                                Edit
+                                            </Link>
+                                            : null
+                                    }
                                 </div>
                             );
                             break;
@@ -170,9 +213,16 @@ const CommitmentSection = () => {
                                 <div className="imageCommitmentSection">
                                     <img src={img7} alt="imageText7" />
                                     <div className="textImageCommitment">
-                                        Developing lasting relationships with our clients based on mutual respect, understanding, and
-                                        excellence in service.
+                                        {blogs[13].body}
                                     </div>
+                                    {
+                                        loggedIn == true ?
+
+                                            <Link className="adminEditLink" to={`/blogs/${13}`}>
+                                                Edit
+                                            </Link>
+                                            : null
+                                    }
                                 </div>
                             );
                             break;
@@ -185,6 +235,14 @@ const CommitmentSection = () => {
                                         We aim to mantain the highest level of professionalism and
                                         ethical standards in all our interactions and services.
                                     </div>
+                                    {
+                                        loggedIn == true ?
+
+                                            <Link className="adminEditLink" to={`/blogs/${7}`}>
+                                                Edit
+                                            </Link>
+                                            : null
+                                    }
                                 </div>
                             );
                             break;

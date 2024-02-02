@@ -1,17 +1,26 @@
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import chicago from './assets/chicago.png';
 
-const AboutUsSection = () => {
+const AboutUsSection = ({ loggedIn, blogs }) => {
     return (
         <div className="aboutUsSection">
             <div className="aboutUsText">
                 <div>
                     <div className='aboutUsTitle'>
-                        About Us
+                        {blogs[5].title}
                     </div>
+                    <br />
                     <div className='textAbout'>
-                        Benson Bradley Signing Service LLC, rooted in Chicago, specializes in mobile
-                        notary and apostille services. Our experienced team prioritizes professionalism and convenience, catering to a diverse clientele with a range of notarial needs. Renowned for reliability and efficiency, we bring notary services directly to you, streamlining legal formalities and emphasizing customer satisfaction.
+                        {blogs[5].body}
                     </div>
+                    {
+                        loggedIn == true ?
+
+                            <Link className="adminEditLink" to={`/blogs/${5}`}>
+                                Edit
+                            </Link>
+                            : null
+                    }
                 </div>
 
                 <div className='width100'>
