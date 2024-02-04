@@ -30,7 +30,7 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/home">
               <Home loggedIn={loggedIn} handleLogout={handleLogout}></Home>
             </Route>
             <Route exact path="/create">

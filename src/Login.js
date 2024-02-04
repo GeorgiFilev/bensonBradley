@@ -16,7 +16,7 @@ const Login = ({ handleLogin }) => {
         if (data[0].username === username && data[0].password === password) {
             console.log(username);
             handleLogin();
-            history.push('/');
+            history.push('/home');
         }
     }
 

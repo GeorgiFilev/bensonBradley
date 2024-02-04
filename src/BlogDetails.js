@@ -36,7 +36,7 @@ const BlogDetails = () => {
                 body: body,
             }),
         }).then(() => {
-            history.push('/');
+            history.push('/home');
         });
     }
     return (
