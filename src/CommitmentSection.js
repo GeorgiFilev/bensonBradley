@@ -68,32 +68,32 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
 
             <div className="commitmentTwosections">
                 <div className="highestProffesional">
-                    <div className={highlited == 1 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(1)}>
-                        {highlited == 1 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
+                    <div className={highlited === 1 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(1)}>
+                        {highlited === 1 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
                         {blogs[7].title}
                     </div>
-                    <div className={highlited == 2 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(2)}>
-                        {highlited == 2 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
+                    <div className={highlited === 2 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(2)}>
+                        {highlited === 2 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
                         {blogs[8].title}
                     </div>
-                    <div className={highlited == 3 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(3)}>
-                        {highlited == 3 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
+                    <div className={highlited === 3 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(3)}>
+                        {highlited === 3 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
                         {blogs[9].title}
                     </div>
-                    <div className={highlited == 4 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(4)}>
-                        {highlited == 4 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
+                    <div className={highlited === 4 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(4)}>
+                        {highlited === 4 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
                         {blogs[10].title}
                     </div>
-                    <div className={highlited == 5 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(5)}>
-                        {highlited == 5 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
+                    <div className={highlited === 5 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(5)}>
+                        {highlited === 5 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
                         {blogs[11].title}
                     </div>
-                    <div className={highlited == 6 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(6)}>
-                        {highlited == 6 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
+                    <div className={highlited === 6 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(6)}>
+                        {highlited === 6 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
                         {blogs[12].title}
                     </div>
-                    <div className={highlited == 7 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(7)}>
-                        {highlited == 7 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
+                    <div className={highlited === 7 ? "higlitedHeader" : "greyHeader"} onClick={() => handleCick(7)}>
+                        {highlited === 7 ? <img src={arrow} className="arrowRightCommitmentSection" alt="arrow-right"></img> : null}
                         {blogs[13].title}
                     </div>
                 </div>
@@ -108,7 +108,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                         {blogs[7].body}
                                     </div>
                                     {
-                                        loggedIn == true ?
+                                        loggedIn === true ?
 
                                             <Link className="adminEditLink" to={`/blogs/${7}`}>
                                                 Edit
@@ -117,7 +117,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     }
                                 </div>
                             );
-                            break;
+
                         case 2:
                             return (
                                 <div className="imageCommitmentSection">
@@ -126,7 +126,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                         {blogs[8].body}
                                     </div>
                                     {
-                                        loggedIn == true ?
+                                        loggedIn === true ?
 
                                             <Link className="adminEditLink" to={`/blogs/${8}`}>
                                                 Edit
@@ -135,7 +135,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     }
                                 </div>
                             );
-                            break;
+
                         case 3:
                             return (
                                 <div className="imageCommitmentSection">
@@ -144,7 +144,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                         {blogs[9].body}
                                     </div>
                                     {
-                                        loggedIn == true ?
+                                        loggedIn === true ?
 
                                             <Link className="adminEditLink" to={`/blogs/${9}`}>
                                                 Edit
@@ -153,7 +153,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     }
                                 </div>
                             );
-                            break;
+
                         case 4:
                             return (
                                 <div className="imageCommitmentSection">
@@ -162,7 +162,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                         {blogs[10].body}
                                     </div>
                                     {
-                                        loggedIn == true ?
+                                        loggedIn === true ?
 
                                             <Link className="adminEditLink" to={`/blogs/${10}`}>
                                                 Edit
@@ -171,7 +171,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     }
                                 </div>
                             );
-                            break;
+
                         case 5:
                             return (
                                 <div className="imageCommitmentSection">
@@ -180,7 +180,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                         {blogs[11].body}
                                     </div>
                                     {
-                                        loggedIn == true ?
+                                        loggedIn === true ?
 
                                             <Link className="adminEditLink" to={`/blogs/${11}`}>
                                                 Edit
@@ -189,7 +189,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     }
                                 </div>
                             );
-                            break;
+
                         case 6:
                             return (
                                 <div className="imageCommitmentSection">
@@ -198,7 +198,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                         {blogs[12].body}
                                     </div>
                                     {
-                                        loggedIn == true ?
+                                        loggedIn === true ?
 
                                             <Link className="adminEditLink" to={`/blogs/${12}`}>
                                                 Edit
@@ -207,7 +207,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     }
                                 </div>
                             );
-                            break;
+
                         case 7:
                             return (
                                 <div className="imageCommitmentSection">
@@ -216,7 +216,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                         {blogs[13].body}
                                     </div>
                                     {
-                                        loggedIn == true ?
+                                        loggedIn === true ?
 
                                             <Link className="adminEditLink" to={`/blogs/${13}`}>
                                                 Edit
@@ -225,7 +225,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     }
                                 </div>
                             );
-                            break;
+
 
                         default:
                             return (
@@ -236,7 +236,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                         ethical standards in all our interactions and services.
                                     </div>
                                     {
-                                        loggedIn == true ?
+                                        loggedIn === true ?
 
                                             <Link className="adminEditLink" to={`/blogs/${7}`}>
                                                 Edit
@@ -245,7 +245,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     }
                                 </div>
                             );
-                            break;
+
                     }
                 })()}
 

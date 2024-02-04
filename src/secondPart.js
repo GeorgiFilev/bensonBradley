@@ -18,7 +18,7 @@ const SecondPart = ({ loggedIn, blogs }) => {
                     {blogs[2].body}
                 </div>
                 {
-                    loggedIn == true ?
+                    loggedIn === true ?
 
                         <Link className="adminEditLink" to={`/blogs/${2}`}>
                             Edit
@@ -47,7 +47,7 @@ const SecondPart = ({ loggedIn, blogs }) => {
                     {blogs[3].body}
                 </div>
                 {
-                    loggedIn == true ?
+                    loggedIn === true ?
 
                         <Link className="adminEditLink" to={`/blogs/${3}`}>
                             Edit
@@ -76,7 +76,7 @@ const SecondPart = ({ loggedIn, blogs }) => {
                     {blogs[4].body}
                 </div>
                 {
-                    loggedIn == true ?
+                    loggedIn === true ?
 
                         <Link className="adminEditLink" to={`/blogs/${4}`}>
                             Edit

@@ -3,7 +3,7 @@
     {
       "title": "My First Blog",
       "body": "Why do we use it? \n it is a long established fact that a reader will be ...",
-      "author": "mario",
+      "author": "mario & luigi",
       "id": "1gas"
     },
     {
@@ -18,7 +18,7 @@
     },
     {
       "id": "3",
-      "title": "Apostille Services",
+      "title": "Apostille Services ",
       "body": "Apostille services involve the certification of documents for international use in countries that are part of the Hague Apostille Convention. The purpose of an apostille is to authenticate the seals and signatures of officials on public documents such as birth certificates, court orders, notarizations, and other legal documents. Essentially, an apostille verifies the authenticity of the document and its origin, making it valid for use in foreign countries that are parties to the Apostille Convention, simplifying the process of certifying documents for international legal purposes."
     },
     {
@@ -170,7 +170,8 @@
   "authentication": [
     {
       "username": "565269115",
-      "password": "NotMyDaddy@2024"
+      "password": "NotMyDaddy@2024",
+      "id": "6939"
     }
   ]
 }

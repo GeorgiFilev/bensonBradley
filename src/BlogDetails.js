@@ -6,7 +6,9 @@ import { useEffect, useState } from "react";
 const BlogDetails = () => {
     const { id } = useParams();
 
-    const { data: blog, error, isLoading } = useFetch('http://localhost:8000/blogs/' + id);
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+    const { data: blog, error, isLoading } = useFetch(`${apiUrl}/blogs/` + id);
+
     const history = useHistory();
 
     const [title, setTitle] = useState('');
@@ -24,7 +26,7 @@ const BlogDetails = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:8000/blogs/' + blog.id, {
+        fetch(`${apiUrl}/blogs/` + blog.id, {
             method: 'PATCH',  // Use 'PATCH' if your API requires a partial update
             headers: {
                 'Content-Type': 'application/json',
@@ -72,24 +74,6 @@ const BlogDetails = () => {
                     </article>
                 )}
             </h2>
-
-            {/* <form onSubmit={handleSubmit} className="formCreate">
-                <label htmlFor=""> Blog Title</label>
-                <input
-                    type="text"
-                    required
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                />
-                <label htmlFor=""> Blog body</label>
-                <textarea name="" id="" cols="30" rows="10"
-                    required
-                    value={body}
-                    onChange={(e) => setBody(e.target.value)}
-                >
-
-                </textarea>
-            </form> */}
         </div>
     );
 }

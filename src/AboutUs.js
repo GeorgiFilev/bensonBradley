@@ -14,7 +14,7 @@ const AboutUsSection = ({ loggedIn, blogs }) => {
                         {blogs[5].body}
                     </div>
                     {
-                        loggedIn == true ?
+                        loggedIn === true ?
 
                             <Link className="adminEditLink" to={`/blogs/${5}`}>
                                 Edit

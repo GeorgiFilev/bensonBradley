@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 import { useHistory } from "react-router-dom";
 import SecondPart from "./secondPart";
@@ -145,7 +144,7 @@ const Home = ({ loggedIn, handleLogout }) => {
                                 {blogs[1].body}
                             </h3>
                             {
-                                loggedIn == true ?
+                                loggedIn === true ?
 
                                     <Link className="adminEditLink" to={`/blogs/${1}`}>
                                         Edit
@@ -213,7 +212,7 @@ const Home = ({ loggedIn, handleLogout }) => {
                     {/* <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} height="big" handleDelete={handleDelete}></BlogList> */}
 
                     {
-                        loggedIn == true ? <button onClick={handleLogout}> log out</button> : <button className="hiddenLogin" onClick={goToLogin}> login</button>
+                        loggedIn === true ? <button onClick={handleLogout}> log out</button> : <button className="hiddenLogin" onClick={goToLogin}> login</button>
                     }
                     <div className="elfsight-app-7c129b96-653b-4934-bdce-dfcb9dff3a21" data-elfsight-app-lazy></div>
                 </div>
