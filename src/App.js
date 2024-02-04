@@ -42,6 +42,9 @@ function App() {
             <Route exact path="/login">
               <Login handleLogin={handleLogin}></Login>
             </Route>
+            <Route path="/">
+              <Home loggedIn={loggedIn}></Home>
+            </Route>
           </Switch>
         </div>
 
