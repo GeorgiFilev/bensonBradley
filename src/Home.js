@@ -123,7 +123,9 @@ const Home = ({ loggedIn, handleLogout }) => {
         setClientVoices(voices);
     }, [])
 
-    const { data: blogs, isLoading, error } = useFetch('http://localhost:8000/blogs');
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+    const { data: blogs, isLoading, error } = useFetch(`${apiUrl}/blogs`);
+
 
     return (
         <div className={"home"}>

@@ -8,7 +8,8 @@ const Login = ({ handleLogin }) => {
     const [password, setPassword] = useState('');
     const history = useHistory();
 
-    const { data, isLoading, error } = useFetch('http://localhost:8000/authentication');
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+    const { data, isLoading, error } = useFetch(`${apiUrl}/authentication`);
 
 
     const loginClick = () => {
