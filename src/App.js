@@ -36,14 +36,11 @@ function App() {
             <Route exact path="/create">
               <Create loggedIn={loggedIn} />
             </Route>
-            <Route exact path="/blogs/:id">
+            <Route exact path="/blogss/:id">
               <BlogDetails loggedIn={loggedIn} />
             </Route>
             <Route exact path="/login">
               <Login handleLogin={handleLogin}></Login>
-            </Route>
-            <Route path="*">
-              <Home loggedIn={loggedIn}></Home>
             </Route>
           </Switch>
         </div>

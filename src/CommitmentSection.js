@@ -110,7 +110,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     {
                                         loggedIn === true ?
 
-                                            <Link className="adminEditLink" to={`/blogs/${7}`}>
+                                            <Link className="adminEditLink" to={`/blogss/${7}`}>
                                                 Edit
                                             </Link>
                                             : null
@@ -128,7 +128,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     {
                                         loggedIn === true ?
 
-                                            <Link className="adminEditLink" to={`/blogs/${8}`}>
+                                            <Link className="adminEditLink" to={`/blogss/${8}`}>
                                                 Edit
                                             </Link>
                                             : null
@@ -146,7 +146,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     {
                                         loggedIn === true ?
 
-                                            <Link className="adminEditLink" to={`/blogs/${9}`}>
+                                            <Link className="adminEditLink" to={`/blogss/${9}`}>
                                                 Edit
                                             </Link>
                                             : null
@@ -164,7 +164,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     {
                                         loggedIn === true ?
 
-                                            <Link className="adminEditLink" to={`/blogs/${10}`}>
+                                            <Link className="adminEditLink" to={`/blogss/${10}`}>
                                                 Edit
                                             </Link>
                                             : null
@@ -182,7 +182,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     {
                                         loggedIn === true ?
 
-                                            <Link className="adminEditLink" to={`/blogs/${11}`}>
+                                            <Link className="adminEditLink" to={`/blogss/${11}`}>
                                                 Edit
                                             </Link>
                                             : null
@@ -200,7 +200,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     {
                                         loggedIn === true ?
 
-                                            <Link className="adminEditLink" to={`/blogs/${12}`}>
+                                            <Link className="adminEditLink" to={`/blogss/${12}`}>
                                                 Edit
                                             </Link>
                                             : null
@@ -218,7 +218,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     {
                                         loggedIn === true ?
 
-                                            <Link className="adminEditLink" to={`/blogs/${13}`}>
+                                            <Link className="adminEditLink" to={`/blogss/${13}`}>
                                                 Edit
                                             </Link>
                                             : null
@@ -238,7 +238,7 @@ const CommitmentSection = ({ loggedIn, blogs }) => {
                                     {
                                         loggedIn === true ?
 
-                                            <Link className="adminEditLink" to={`/blogs/${7}`}>
+                                            <Link className="adminEditLink" to={`/blogss/${7}`}>
                                                 Edit
                                             </Link>
                                             : null

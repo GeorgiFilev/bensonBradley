@@ -60,7 +60,7 @@ const Questions = ({ loggedIn, blogs }) => {
                         {
                             loggedIn == true ?
 
-                                <Link className="adminEditLink" to={`/blogs/${27}`}>
+                                <Link className="adminEditLink" to={`/blogss/${27}`}>
                                     Edit
                                 </Link>
                                 : null
@@ -88,7 +88,7 @@ const Questions = ({ loggedIn, blogs }) => {
                         {
                             loggedIn == true ?
 
-                                <Link className="adminEditLink" to={`/blogs/${28}`}>
+                                <Link className="adminEditLink" to={`/blogss/${28}`}>
                                     Edit
                                 </Link>
                                 : null
@@ -114,7 +114,7 @@ const Questions = ({ loggedIn, blogs }) => {
                         {
                             loggedIn == true ?
 
-                                <Link className="adminEditLink" to={`/blogs/${29}`}>
+                                <Link className="adminEditLink" to={`/blogss/${29}`}>
                                     Edit
                                 </Link>
                                 : null
@@ -140,7 +140,7 @@ const Questions = ({ loggedIn, blogs }) => {
                         {
                             loggedIn == true ?
 
-                                <Link className="adminEditLink" to={`/blogs/${30}`}>
+                                <Link className="adminEditLink" to={`/blogss/${30}`}>
                                     Edit
                                 </Link>
                                 : null
@@ -302,7 +302,7 @@ const Questions = ({ loggedIn, blogs }) => {
                         {
                             loggedIn == true ?
 
-                                <Link className="adminEditLink" to={`/blogs/${31}`}>
+                                <Link className="adminEditLink" to={`/blogss/${31}`}>
                                     Edit
                                 </Link>
                                 : null

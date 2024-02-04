@@ -17,7 +17,7 @@ const MapSection = ({ loggedIn, blogs }) => {
                 {
                     loggedIn === true ?
 
-                        <Link className="adminEditLink" to={`/blogs/${6}`}>
+                        <Link className="adminEditLink" to={`/blogss/${6}`}>
                             Edit
                         </Link>
                         : null

@@ -146,7 +146,7 @@ const Home = ({ loggedIn, handleLogout }) => {
                             {
                                 loggedIn === true ?
 
-                                    <Link className="adminEditLink" to={`/blogs/${1}`}>
+                                    <Link className="adminEditLink" to={`/blogss/${1}`}>
                                         Edit
                                     </Link>
                                     : null

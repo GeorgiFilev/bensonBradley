@@ -20,7 +20,7 @@ const SecondPart = ({ loggedIn, blogs }) => {
                 {
                     loggedIn === true ?
 
-                        <Link className="adminEditLink" to={`/blogs/${2}`}>
+                        <Link className="adminEditLink" to={`/blogss/${2}`}>
                             Edit
                         </Link>
                         : null
@@ -49,7 +49,7 @@ const SecondPart = ({ loggedIn, blogs }) => {
                 {
                     loggedIn === true ?
 
-                        <Link className="adminEditLink" to={`/blogs/${3}`}>
+                        <Link className="adminEditLink" to={`/blogss/${3}`}>
                             Edit
                         </Link>
                         : null
@@ -78,7 +78,7 @@ const SecondPart = ({ loggedIn, blogs }) => {
                 {
                     loggedIn === true ?
 
-                        <Link className="adminEditLink" to={`/blogs/${4}`}>
+                        <Link className="adminEditLink" to={`/blogss/${4}`}>
                             Edit
                         </Link>
                         : null

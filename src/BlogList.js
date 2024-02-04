@@ -6,7 +6,7 @@ const BlogList = ({ blogs, height }) => {
         <div className="blog-list">
             {blogs.map((blog) => (
                 <div className={height === 'big' ? "blog-preview" : "blog-preview2"} key={blog.id}>
-                    <Link to={`/blogs/${blog.id}`}>
+                    <Link to={`/blogss/${blog.id}`}>
                         <h2>{blog.title}</h2>
                         <p>Written by {blog.author}</p>
                         <p>{blog.id}</p>
