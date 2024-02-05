@@ -1,7 +1,7 @@
 
 // const jsonServer = require("json-server");
 // const server = jsonServer.create();
-// const router = jsonServer.router("./data/db.json");
+// const router = jsonServer.router("/db.json");
 // const middlewares = jsonServer.defaults();
 // const cors = require("cors");
 
@@ -42,7 +42,7 @@ const server = http.createServer((req, res) => {
     // Assuming you have a route for /blogs
     if (req.url === '/blogs' && req.method === 'GET') {
         // Read data from a file (you should replace this with your actual data source)
-        fs.readFile('./data/db.json', 'utf8', (err, data) => {
+        fs.readFile('blogs.json', 'utf8', (err, data) => {
             if (err) {
                 res.writeHead(500);
                 res.end('Internal Server Error');
@@ -57,7 +57,7 @@ const server = http.createServer((req, res) => {
     }
 });
 
-const PORT = process.env.REACT_APP_API_PORT || 8001;
+const PORT = process.env.REACT_APP_API_PORT || 8000;
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
