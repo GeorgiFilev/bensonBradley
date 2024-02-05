@@ -5,20 +5,20 @@ const router = jsonServer.router("./data/db.json");
 const middlewares = jsonServer.defaults();
 const cors = require("cors");
 
-server.use(
-    cors({
-        origin: true,
-        credentials: true,
-        preflightContinue: false,
-        methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    }),
-);
-server.options("*", cors());
-
+// server.use(
+//     cors({
+//         origin: true,
+//         credentials: true,
+//         preflightContinue: false,
+//         methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//     }),
+// );
+// server.options("*", cors());
+server.use(cors());
 server.use(middlewares);
 server.use(router);
 server.listen(process.env.REACT_APP_API_PORT, () => {
-    console.log("JSON Server is running");
+    console.log(`JSON Server is running on ${process.env.REACT_APP_API_PORT}`);
 });
 
 
