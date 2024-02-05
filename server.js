@@ -19,7 +19,7 @@ const cors = require("cors");
 server.use(middlewares);
 server.use(
     jsonServer.rewriter({
-        "/blogs/**": "/$1",
+        "/api/*": "/$1",
     })
 )
 
