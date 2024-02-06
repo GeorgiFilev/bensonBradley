@@ -3,7 +3,7 @@ import useFetch from "./useFetch";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useEffect, useState } from "react";
 
-const BlogDetails = () => {
+const BlogDetails = ({ loggedIn }) => {
     const { id } = useParams();
 
     // const apiUrl = `${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/api` || 'http://localhost:8000';
@@ -46,7 +46,7 @@ const BlogDetails = () => {
                 {isLoading && <div> Loading ... </div>}
                 {error && <div> {error}</div>}
 
-                {blog && (
+                {(blog && loggedIn == true) && (
                     <article>
                         <form onSubmit={handleSubmit} >
                             <div> Section {blog.id}</div>
