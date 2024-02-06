@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const BlogDetails = () => {
     const { id } = useParams();
 
-    const apiUrl = `${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}` || 'http://localhost:8000';
+    const apiUrl = `${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/api` || 'http://localhost:8000';
     const { data: blog, error, isLoading } = useFetch(`${apiUrl}/blogs/` + id);
 
     const history = useHistory();
