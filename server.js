@@ -14,8 +14,8 @@ server.get('*', (req, res) => {
     res.sendFile(__dirname + './build/index.html');
 });
 
-server.listen(process.env.REACT_APP_API_PORT, () => {
-    console.log(`JSON Server is running on ${process.env.REACT_APP_API_PORT}`);
+server.listen(process.env.PORT, () => {
+    console.log(`JSON Server is running on ${process.env.PORT}`);
 });
 
 

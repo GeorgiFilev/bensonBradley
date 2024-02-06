@@ -8,7 +8,8 @@ const Login = ({ handleLogin }) => {
     const [password, setPassword] = useState('');
     const history = useHistory();
 
-    const apiUrl = `${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/api`;
+    // const apiUrl = `${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/api`;
+    const apiUrl = `/api`;
     const { data, isLoading, error } = useFetch(`${apiUrl}/authentication`);
 
 
