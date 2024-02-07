@@ -23,7 +23,7 @@ const Home = ({ loggedIn, handleLogout }) => {
             "id": 1,
             "message": "We had documents notarized today by Glynis Wheeler. Glynis was and is amazing. We had a complicated situation. She handled it with professionalism and understanding that went above and beyond. She clearly loves people. I understand she also sells insurance. She'll get every future referral and Chicago business dealing I have.",
             "name": "Jason",
-            "stars": 4,
+            "stars": 5,
         },
         {
             "id": 2,
@@ -36,6 +36,24 @@ const Home = ({ loggedIn, handleLogout }) => {
             "message": "Fantastic notary. Recommend 100%. Straightforward scheduling process online and ultra convenient location. Will definitely use again whenever I need a notary in Chicago. Eric was also quick to respond to questions I had prior to my appointment.",
             "name": "Justin G",
             "stars": 5,
+        },
+        {
+            "id": 4,
+            "message": "Fantastic service! Glynis Wheeler is friendly, kind, and an expert notary! So happy to be able to get our documents notarized after being turned back by several other notaries downtown! She’s right near the Daily Center where we needed to go after with our notarized documents. If you need a notary, call Glynis!",
+            "name": "Luis L",
+            "stars": 5
+        },
+        {
+            "id": 5,
+            "message": "They are so nice here! Evenerything was easy and simple. Mrs. Wheeler helped me and she was so sweet. Ill definitely come back.",
+            "name": "Alexis G",
+            "stars": 5
+        },
+        {
+            "id": 6,
+            "message": "Detail oriented, quick, and accurate. Everything you would want from a Notary service.",
+            "name": "Azeem K",
+            "stars": 5
         }
     ];
     const [clientVoices, setClientVoices] = useState(null);
@@ -122,8 +140,8 @@ const Home = ({ loggedIn, handleLogout }) => {
         setClientVoices(voices);
     }, [])
 
-    // const apiUrl = `${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/api`;
-    const apiUrl = `/api`;
+    // const apiUrl = `${process.env.REACT_APP_API_HOST}:${process.env.REACT_APP_API_PORT}/api`; 'localhost://8000'
+    const apiUrl = 'http://localhost:8000';
     const { data: blogs, isLoading, error } = useFetch(`${apiUrl}/blogs`);
     console.log(process.env);
 

@@ -26,14 +26,19 @@ const SecondPart = ({ loggedIn, blogs }) => {
                         : null
                 }
                 <div className='rowOnCard'>
-                    <span className='requestQuote'>
-                        Request quote
-                    </span>
 
-                    <span className='getConsultation'>
-                        Get consultation
-                        <img src={arrow} alt="arrow-right" />
+                    <span className='requestQuote'>
+                        <a href="/home#quickOrderSection" className='text-decNone black'>
+                            Request quote
+                        </a>
                     </span>
+                    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0YkZpH3UiD_NLyOuPFBoNFpm5hdORQ9yV9K0ckl5YvRde0wNvU4ogh9zq5ZQ7MR7yI1AYKHrEh" className='text-decNone'>
+                        <span className='getConsultation'>
+                            Get consultation
+                            <img src={arrow} alt="arrow-right" />
+                        </span>
+                    </a>
+
                 </div>
             </div>
             <div className="threeCards">
@@ -56,13 +61,16 @@ const SecondPart = ({ loggedIn, blogs }) => {
                 }
                 <div className='rowOnCard'>
                     <span className='requestQuote'>
-                        Request quote
+                        <a href="/home#quickOrderSection" className='text-decNone black'>
+                            Request quote
+                        </a>
                     </span>
-
-                    <span className='getConsultation'>
-                        Get consultation
-                        <img src={arrow} alt="arrow-right" />
-                    </span>
+                    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0YkZpH3UiD_NLyOuPFBoNFpm5hdORQ9yV9K0ckl5YvRde0wNvU4ogh9zq5ZQ7MR7yI1AYKHrEh" className='text-decNone'>
+                        <span className='getConsultation'>
+                            Get consultation
+                            <img src={arrow} alt="arrow-right" />
+                        </span>
+                    </a>
                 </div>
             </div>
             <div className="threeCards">
@@ -85,13 +93,17 @@ const SecondPart = ({ loggedIn, blogs }) => {
                 }
                 <div className='rowOnCard'>
                     <span className='requestQuote'>
-                        Request quote
+                        <a href="/home#quickOrderSection" className='text-decNone black'>
+                            Request quote
+                        </a>
                     </span>
 
-                    <span className='getConsultation'>
-                        Get consultation
-                        <img src={arrow} alt="arrow-right" />
-                    </span>
+                    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0YkZpH3UiD_NLyOuPFBoNFpm5hdORQ9yV9K0ckl5YvRde0wNvU4ogh9zq5ZQ7MR7yI1AYKHrEh" className='text-decNone'>
+                        <span className='getConsultation'>
+                            Get consultation
+                            <img src={arrow} alt="arrow-right" />
+                        </span>
+                    </a>
                 </div>
             </div>
 

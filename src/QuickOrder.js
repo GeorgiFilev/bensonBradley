@@ -20,7 +20,7 @@ const QuickOrder = () => {
 
 
     return (
-        <div className="quickOrderSection">
+        <div id="quickOrderSection" className="quickOrderSection">
             <div className="leftOrder">
                 <img className="goRight" src={feather} alt="feather" />
                 <img src={feather2} alt="feather2" />

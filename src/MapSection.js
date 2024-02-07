@@ -26,9 +26,9 @@ const MapSection = ({ loggedIn, blogs }) => {
 
                 </span>
                 <div className='links'>
-                    <Link to="/" className="borderR32 text-decNone">
+                    <a href="/home#quickOrderSection" className="borderR32 text-decNone">
                         Get Apostile Services
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>
