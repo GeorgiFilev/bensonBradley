@@ -9,7 +9,7 @@ const QuickOrder = () => {
     const [email, setEmail] = useState('');
     const [country, setCountry] = useState('');
     const [phoneNumber, setPhoneNUmber] = useState('');
-    const [serviceType, setServiceType] = useState('');
+    const [serviceType, setServiceType] = useState('Birth Certificates');
     const [file, setFile] = useState('');
 
     const handleFileChange = (e) => {
@@ -17,6 +17,45 @@ const QuickOrder = () => {
         setFile(selectedFile);
     };
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // const formData = {
+        //     name,
+        //     email,
+        //     country,
+        //     phoneNumber,
+        //     serviceType,
+        //     file
+        // };
+        const formData = new FormData(); // Create FormData object
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('country', country);
+        formData.append('phoneNumber', phoneNumber);
+        formData.append('serviceType', serviceType);
+        formData.append('file', file); // Append the entire file object
+
+        try {
+            const response = await fetch('/api/submit-form', {
+                method: 'POST',
+                body: formData,
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // },
+                // body: JSON.stringify(formData)
+            });
+            if (response.ok) {
+                alert('Form submitted successfully');
+            }
+            else {
+                alert('Error submitting form');
+            }
+        } catch (error) {
+            console.error('Error submitting form: ', error);
+            alert('Error submitting form');
+        }
+    };
 
 
     return (
@@ -37,9 +76,7 @@ const QuickOrder = () => {
                 </div>
                 <div className="formOrder">
                     <form
-                        action="mailto:georgi@remotemore.com"
-                        method="post"
-                        encType="text/plain"
+                        onSubmit={handleSubmit}
                         className="formQuickOrder"
                     >
                         <div className="column inputLine">
