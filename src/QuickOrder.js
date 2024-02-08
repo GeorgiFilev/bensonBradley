@@ -36,6 +36,8 @@ const QuickOrder = () => {
         formData.append('serviceType', serviceType);
         formData.append('file', file); // Append the entire file object
 
+        window.location.href = 'https://square.link/u/5JRgYKiS';
+
         try {
             const response = await fetch('/api/submit-form', {
                 method: 'POST',
@@ -358,6 +360,7 @@ const QuickOrder = () => {
                                             onChange={handleFileChange}
                                             style={{ display: 'none' }}
                                             name="file"
+                                            required
                                         />
                                     </label>
                                 </div>
