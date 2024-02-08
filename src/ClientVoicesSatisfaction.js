@@ -10,7 +10,7 @@ import { useState } from 'react';
 const ClientVoicesSatisfaction = ({ clientVoices }) => {
 
 
-    const [activeArrow, setActiveArrow] = useState('left');
+    const [activeArrow, setActiveArrow] = useState('right');
     const handleCLick = (which) => {
         if (which === 'left') {
             setActiveArrow('right');

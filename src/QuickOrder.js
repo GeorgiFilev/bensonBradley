@@ -7,7 +7,7 @@ const QuickOrder = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [country, setCountry] = useState('');
+    const [country, setCountry] = useState('Albania');
     const [phoneNumber, setPhoneNUmber] = useState('');
     const [serviceType, setServiceType] = useState('Birth Certificates');
     const [file, setFile] = useState('');
