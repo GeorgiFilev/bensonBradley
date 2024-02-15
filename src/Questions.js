@@ -52,7 +52,7 @@ const Questions = ({ loggedIn, blogs }) => {
                             isMobileDevice ?
                                 <span className='phoneRedirect' onClick={handleCallNowClick}>Call Now</span>
                                 :
-                                <a className='phoneRedirect' href="tel:+13129529877">Call Now</a>
+                                <a className='phoneRedirect' href="#header">Call Now</a>
                         }
 
                     </div>

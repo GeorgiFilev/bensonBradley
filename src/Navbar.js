@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className='flexNavbar'>
                 <img src={phone} alt="phone-icon" />
                 <div className='callNowHeader'> Call now</div>
-                <h1 className='redColor'>Call now: +1 312-952-9877</h1>
+                <h1 id="header" className='redColor'>Call now: +1 312-952-9877</h1>
             </div>
             <div className='logo'>
                 <Link to="/">
