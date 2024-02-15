@@ -221,6 +221,7 @@ h4 {
   padding: 8px 16px;
   border-radius: 16px;
   border: 1px solid #C4C6C5;
+  cursor: pointer;
 }
 
 .getConsultation {
@@ -863,6 +864,18 @@ label {
   font-size: 16px;
 }
 
+.addMoreTypes {
+  border-radius: 10px;
+  background-color: #202221;
+  margin: 10px auto;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.blackhe {
+  height: 20px;
+}
 
 /* ------------------------------------------------ footer */
 
@@ -906,6 +919,7 @@ label {
   color: white;
   font-weight: 700;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .linesInFooter2 {
@@ -914,6 +928,7 @@ label {
   font-weight: 700;
   font-size: 18px;
   opacity: 0.8;
+  cursor: pointer;
 }
 
 .linesInFooter3 {
@@ -924,7 +939,7 @@ label {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  cursor: pointer;
 }
 
 .footer4row {

@@ -3,6 +3,8 @@
 import React from "react";
 
 const Popup = ({ onClose, dynamicData }) => {
+
+
     return (
         <div className="popup">
             <div onClick={onClose} className="overlay"></div>
@@ -11,9 +13,17 @@ const Popup = ({ onClose, dynamicData }) => {
                 <h2>{dynamicData.title}</h2>
                 <p>{dynamicData.content}</p>
                 <div className="buttonPopup borderR32">
-                    <a className="text-decNone white" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0YkZpH3UiD_NLyOuPFBoNFpm5hdORQ9yV9K0ckl5YvRde0wNvU4ogh9zq5ZQ7MR7yI1AYKHrEh">
-                        {dynamicData.buttonText}
-                    </a>
+                    {
+                        dynamicData.title === 'Fingerprint' ?
+                            <a className="text-decNone white" href="http://bensonbradleyfingerprintingservice.com/" onClick={onClose}>
+                                {dynamicData.buttonText}
+                            </a>
+                            :
+                            <a className="text-decNone white" href="#quickOrderSection">
+                                {dynamicData.buttonText}
+                            </a>
+                    }
+
 
                 </div>
             </div>

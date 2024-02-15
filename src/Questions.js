@@ -10,6 +10,8 @@ const Questions = ({ loggedIn, blogs }) => {
     const [fourthQuestion, SetFourthQuestion] = useState(false);
     const [fifthQuestion, SetFifthQuestion] = useState(false);
 
+    const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+
     const handleClick = (questionN) => {
         switch (questionN) {
             case 1:
@@ -30,6 +32,10 @@ const Questions = ({ loggedIn, blogs }) => {
         }
     }
 
+    const handleCallNowClick = () => {
+        window.location.href = "tel:+13129529877";
+    };
+
     return (
         <div className="questionsSection">
             <div className="leftSideQuestions">
@@ -42,7 +48,13 @@ const Questions = ({ loggedIn, blogs }) => {
                     </div>
                     <br />
                     <div className='buttonCallNow'>
-                        <a className='phoneRedirect' href="tel:+13129529877">Call Now</a>
+                        {
+                            isMobileDevice ?
+                                <span className='phoneRedirect' onClick={handleCallNowClick}>Call Now</span>
+                                :
+                                <a className='phoneRedirect' href="tel:+13129529877">Call Now</a>
+                        }
+
                     </div>
                 </div>
             </div>

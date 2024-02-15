@@ -5,6 +5,10 @@ import arrow from './assets/right-arrow.svg';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const SecondPart = ({ loggedIn, blogs }) => {
+    const handleRequestQuote = (e) => {
+        e.preventDefault(); // Prevent the default behavior of the anchor tag
+        window.location.href = "#quickOrderSection";
+    }
     return (
         <div className="secondSection">
             <div className="threeCards">
@@ -28,7 +32,7 @@ const SecondPart = ({ loggedIn, blogs }) => {
                 <div className='rowOnCard'>
 
                     <span className='requestQuote'>
-                        <a href="/home#quickOrderSection" className='text-decNone black'>
+                        <a onClick={(e) => handleRequestQuote(e)} className='text-decNone black'>
                             Request quote
                         </a>
                     </span>
@@ -61,7 +65,7 @@ const SecondPart = ({ loggedIn, blogs }) => {
                 }
                 <div className='rowOnCard'>
                     <span className='requestQuote'>
-                        <a href="/home#quickOrderSection" className='text-decNone black'>
+                        <a onClick={handleRequestQuote} className='text-decNone black'>
                             Request quote
                         </a>
                     </span>
@@ -93,7 +97,7 @@ const SecondPart = ({ loggedIn, blogs }) => {
                 }
                 <div className='rowOnCard'>
                     <span className='requestQuote'>
-                        <a href="/home#quickOrderSection" className='text-decNone black'>
+                        <a onClick={handleRequestQuote} className='text-decNone black'>
                             Request quote
                         </a>
                     </span>

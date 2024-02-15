@@ -123,6 +123,14 @@ const Home = ({ loggedIn, handleLogout }) => {
                     break;
                 case 8:
                     setSelectedBubbleData({
+                        title: blogs[32].title,
+                        content: blogs[32].body,
+                        buttonText: 'Make an appointment',
+                    });
+                    setPopupVisible(true);
+                    break;
+                case 9:
+                    setSelectedBubbleData({
                         title: blogs[26].title,
                         content: blogs[26].body,
                         buttonText: 'Learn more',

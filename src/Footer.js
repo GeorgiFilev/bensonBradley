@@ -1,4 +1,15 @@
 const Footer = () => {
+
+    const handleClick = (e, num) => {
+        e.preventDefault();
+        if (num == 1) {
+            window.location.href = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0YkZpH3UiD_NLyOuPFBoNFpm5hdORQ9yV9K0ckl5YvRde0wNvU4ogh9zq5ZQ7MR7yI1AYKHrEh";
+        }
+        else {
+            window.location.href = "#quickOrderSection";
+        }
+    }
+
     return (
         <div className="footer">
             <div className="section1Footer">
@@ -26,15 +37,15 @@ const Footer = () => {
                         Quick Links
                     </div>
                     <br />
-                    <div className="linesInFooter3">
+                    <div className="linesInFooter3" onClick={(e) => handleClick(e, 2)}>
                         Translation services
                     </div>
                     <br />
-                    <div className="linesInFooter3">
+                    <div className="linesInFooter3" onClick={(e) => handleClick(e, 2)}>
                         Apostille services
                     </div>
                     <br />
-                    <div className="linesInFooter3">
+                    <div className="linesInFooter3" onClick={(e) => handleClick(e, 1)}>
                         Notarization
                     </div>
                 </div>
