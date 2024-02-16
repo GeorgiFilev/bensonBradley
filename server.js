@@ -33,6 +33,8 @@ async function sendEmail(formData, file) {
         <h3>country: ${formData.country} </h3>
         <h3>phone number: ${formData.phoneNumber} </h3>
         <h3>service type: <b>${formData.serviceType} </b></h3>
+        <h3>translation ${formData.translation}</h3>
+        <h3>expedated ${formData.expedited}</h3>
     `;
 
     const mailOptions = {

@@ -877,6 +877,10 @@ label {
   height: 20px;
 }
 
+.someSpaceRight {
+  margin-right: 20px;
+}
+
 /* ------------------------------------------------ footer */
 
 .footer {

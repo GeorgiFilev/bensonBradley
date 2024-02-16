@@ -11,6 +11,9 @@ const QuickOrder = () => {
     const [phoneNumber, setPhoneNUmber] = useState('');
     const [serviceTypes, setServiceTypes] = useState(['Birth Certificates']);
     const [file, setFile] = useState('');
+    const [numberOfPages, setNumberOfPages] = useState('');
+    const [translation, setTranslation] = useState('yes');
+    const [expedited, setExpedited] = useState('yes');
 
     const handleFileChange = (e) => {
         const selectedFile = e.target.files[0];
@@ -35,6 +38,9 @@ const QuickOrder = () => {
         formData.append('phoneNumber', phoneNumber);
         formData.append('serviceType', serviceTypes);
         formData.append('file', file); // Append the entire file object
+        formData.append('numberOfPages');
+        formData.append('translation', translation);
+        formData.append('expedited', expedited);
 
         window.location.href = 'https://square.link/u/5JRgYKiS';
 
@@ -355,6 +361,68 @@ const QuickOrder = () => {
                             <div className="addMoreTypes" onClick={addServiceType}>+ ADD</div>
                         </div>
 
+                        <div className="row flex gap10betweenOrder">
+                            <div className="flex column width50percent">
+                                <label htmlFor="Translation">Translation</label>
+                                <br />
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        value="yes"
+                                        onChange={(value) => setTranslation(value)}
+                                    />
+                                    <label htmlFor="yes" className="someSpaceRight">Yes</label>
+                                    <span></span>
+                                    <input
+                                        type="checkbox"
+                                        value="no"
+                                        onChange={(value) => setTranslation(value)}
+                                    />
+                                    <label htmlFor="no">No</label>
+                                </div>
+                            </div>
+
+                            <div className="flex column width50percent">
+                                <label htmlFor="number of pages"> Number of pages for the translaation</label>
+                                <select
+                                    className="orderSelectField"
+                                    type="text"
+                                    required
+                                    value={numberOfPages}
+                                    name="number of pages"
+                                    onChange={(e) => setNumberOfPages(e.target.value)}
+                                >
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="expedited">Do you want your order expedited within 24 hours?</label>
+                            <br />
+                            <input
+                                type="checkbox"
+                                value="yes"
+                                onChange={(value) => setExpedited(value)}
+                            />
+                            <br />
+                            <label htmlFor="yes" className="someSpaceRight">Yes</label>
+
+                            <input
+                                type="checkbox"
+                                value="yes"
+                                onChange={(value) => setExpedited(value)}
+                            />
+                            <label htmlFor="yes">No</label>
+                        </div>
+                        <br />
 
                         <div className="greyFileUpload">
                             <div className="leftSideDrag">
