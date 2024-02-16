@@ -412,7 +412,6 @@ const QuickOrder = () => {
                                 value="yes"
                                 onChange={(value) => setExpedited(value)}
                             />
-                            <br />
                             <label htmlFor="yes" className="someSpaceRight">Yes</label>
 
                             <input
